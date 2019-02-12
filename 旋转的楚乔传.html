@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        div {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 200px auto;
+            position: relative;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: right top;/* 在hover之前就设置好旋转中心点 */
+            transition: all 0.5s ease;
+        }
+        div:hover img:nth-child(1) {
+            transform: rotate(45deg);
+        }
+        div:hover img:nth-child(2) {
+            transform: rotate(90deg);
+        }
+        div:hover img:nth-child(3) {
+            transform: rotate(135deg);
+        }
+        div:hover img:nth-child(4) {
+            transform: rotate(180deg);
+        }
+        div:hover img:nth-child(5) {
+            transform: rotate(215deg);
+        }
+        div:hover img:nth-child(6) {
+            transform: rotate(300deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/1.jpg" alt="">
+        <img src="images/4.jpg" alt="">
+        <img src="images/5.jpg" alt="">
+        <img src="images/6.jpg" alt="">
+        <img src="images/1.jpg" alt="">
+        <img src="images/4.jpg" alt="">
+    </div>
+</body>
+</html>
