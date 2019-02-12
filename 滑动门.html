@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>微信导航栏---滑动门</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: url(images/wx.jpg) repeat-x;
+      }
+      nav {
+        height: 80px;
+        /* background-color: pink; */
+      }
+      nav ul {
+        list-style-type: none;
+      }
+      nav ul li {
+        float: left;
+        padding-top: 10px;
+        margin: 10px;
+      }
+      nav ul li a {
+        display: inline-block;
+        background: url(images/to.png);
+        padding-left: 15px;
+        color: #fff;
+        line-height: 33px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      nav ul li a span {
+        display: inline-block;
+        background: url(images/to.png) right;
+        /* height: 35px; */ /* 不能有宽，要根据内容填充，用padding撑开就好 */
+        line-height: 33px;/* 有行高可以不用高 */
+        padding-right: 15px;
+      }
+      nav ul li a:hover {
+          background: url(images/ao.png);
+      }
+      nav ul li a:hover span {
+          background: url(images/ao.png) right;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <span>首页</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>公司简介</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>首页</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>公司简介</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
