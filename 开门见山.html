@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            background: url(images/1.jpg);
+            perspective: 1000px;/* 视距 3D效果 */
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .door-l,.door-r {
+            content:"";
+            width: 150px;
+            height: 200px;
+            border: 1px solid #000;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            transition:all 1s ease;/* 过渡 */
+        }
+        .door-l {
+            left: 0;
+            transform-origin: left;/* 设置变形中心 */
+        }
+        .door-r {
+            right: 0;
+            transform-origin: right;
+        }
+        .door-l::before,
+        .door-r::before {
+            content: "";
+            display: block;/* 伪元素是行内元素，要给宽高，转换成块级 */
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);/* 绝对定位完美居中法 */
+        }
+        .door-l::before {
+            right: 10px;
+        }
+        .door-r::before {
+            left: 8px;/* 门有2px border */
+        }
+        section:hover .door-l {
+            transform: rotateY(-150deg);/* 负值 向左边 */
+
+        }
+        section:hover .door-r {
+            transform: rotateY(150deg);/* 正值 向右边 */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="door-l"></div>
+        <div class="door-r"></div>
+    </section>
+</body>
+</html>

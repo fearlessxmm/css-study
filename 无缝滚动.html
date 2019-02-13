@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        nav {
+            width: 882px;
+            height: 88px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style: none;
+            animation: move 5s linear infinite;/* 匀速 反复进行 */
+            width: 200%;/* 两组li所以ul要两倍nav宽 */
+        }
+        @keyframes move {
+            form {
+                transform: translate3d(0,0,0);
+            }
+            to {
+                transform: translate3d(-882px,0,0);
+            }
+        }
+        nav ul li {
+            float: left;
+        }
+        nav:hover ul {
+            animation-play-state: paused;/* 鼠标放上去，动画暂停 */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="images/nav1.jpg" alt=""></li>
+            <li><img src="images/nav2.jpg" alt=""></li>
+            <li><img src="images/nav3.jpg" alt=""></li>
+            <li><img src="images/nav4.jpg" alt=""></li>
+            <li><img src="images/nav5.jpg" alt=""></li>
+            <li><img src="images/nav6.jpg" alt=""></li>
+            <li><img src="images/nav7.jpg" alt=""></li>
+            <!-- 要无缝，则放两组 -->
+            <li><img src="images/nav1.jpg" alt=""></li>
+            <li><img src="images/nav2.jpg" alt=""></li>
+            <li><img src="images/nav3.jpg" alt=""></li>
+            <li><img src="images/nav4.jpg" alt=""></li>
+            <li><img src="images/nav5.jpg" alt=""></li>
+            <li><img src="images/nav6.jpg" alt=""></li>
+            <li><img src="images/nav7.jpg" alt=""></li>
+        </ul>
+    </nav>
+</body>
+</html>
