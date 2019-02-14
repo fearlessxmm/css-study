@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;/* 调整主轴方向，改为垂直排列column 水平排列row默认的 */
+        }
+        section div {
+            flex:1;
+        }
+        section div:nth-child(1) {
+            background: pink;
+        }
+        section div:nth-child(2) {
+            background: purple;
+            margin: 5px 0;
+        }
+        section div:nth-child(3) {
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

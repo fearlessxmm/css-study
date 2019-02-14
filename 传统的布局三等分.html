@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+        }
+        section div {
+            width: 33.3%;/* 等分的百分比需要自己算，有点麻烦 */
+            height: 500px;
+            float: left;
+            margin: 0 5px;/* 传统的三等分布局加了margin就会有出现不在一行的情况 */
+        }
+        section div:nth-child(1) {
+            background: pink;
+        }
+        section div:nth-child(2) {
+            background: purple;
+        }
+        section div:nth-child(3) {
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

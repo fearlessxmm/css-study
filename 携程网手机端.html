@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-width: 320px;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            /* 高度继承body */
+        }
+
+        header img {
+            width: 100%;
+            /* 高度继承header */
+        }
+
+        nav {
+            width: 100%;
+            /* padding: 0 5px;这样写会突出来，所以可以对子元素row加margin，灵活 */
+        }
+
+        nav .row {
+            height: 88px;
+            background: pink;
+            border-radius: 5px;
+            margin: 0 2px;/*对子元素row加margin，灵活 */
+            display: flex;
+            margin-bottom: 2px;
+        }
+        nav .row:nth-child(2) {
+            background: purple;
+        }
+        nav .row:nth-child(3) {
+            background: skyblue;
+        }
+        nav .row .row3 {
+            height: 88px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;/* 调整主轴，改变排列方式 */
+            border-left: 1px solid #fff;
+        }
+        nav .row .row3:nth-child(1) {
+            border-left: 0;
+        }
+        nav .row .row3 a {
+            text-align: center;
+            line-height: 44px;/* 垂直居中 */
+            text-decoration: none;
+            color: #fff;
+        }
+        nav .row .row3 a:nth-child(1) {
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/ctrip.jpg" alt="">
+    </header>
+    <nav>
+        <div class="row">
+            <div class="row3"></div>
+            <div class="row3">
+                <a href="#">酒店预订</a>
+                <a href="#">酒店预订</a>
+            </div>
+            <div class="row3">
+                <a href="#">酒店预订</a>
+                <a href="#">酒店预订</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row3"></div>
+            <div class="row3">
+                <a href="#">酒店预订</a>
+                <a href="#">酒店预订</a>
+            </div>
+            <div class="row3">
+                <a href="#">酒店预订</a>
+                <a href="#">酒店预订</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row3"></div>
+            <div class="row3">
+                <a href="#">酒店预订</a>
+                <a href="#">酒店预订</a>
+            </div>
+            <div class="row3">
+                <a href="#">酒店预订</a>
+                <a href="#">酒店预订</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

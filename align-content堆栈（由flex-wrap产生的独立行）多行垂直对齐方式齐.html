@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            display: flex;
+            /* align-content是针对flex容器里面多轴(多行)的情况,align-items是针对一行的情况进行排列。 */
+            /* flex-direction: row;
+            flex-wrap: wrap;   这两句话等价于下面的这句话*/
+            flex-flow: row wrap;/* 两者的综合 */
+            align-content: center;/* 项目位于容器的中心。 */
+        }
+
+        section div {
+            width: 350px;
+            height: 200px;
+        }
+
+        section div:nth-child(1) {
+            background: pink;
+            
+        }
+
+        section div:nth-child(2) {
+            background: purple;
+            order:1;
+        }
+
+        section div:nth-child(3) {
+            background: skyblue;
+        }
+        section div:nth-child(4) {
+            background: black;
+        }
+        section div:nth-child(5) {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </section>
+</body>
+
+</html>

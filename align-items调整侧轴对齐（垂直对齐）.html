@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            display: flex;
+            /* align-items: center;垂直居中 */
+            align-items: flex-start;/* 垂直对齐开始位置 上对齐 */
+            /*align-items: flex-end; 垂直对齐结束位置 底对齐*/
+            /* align-items:stretch;让子元素的高度拉伸适用父容器（子元素不给高度的前提下) */
+        } 
+        section div {
+            width: 250px;
+            height: 250px;
+        }
+        section div:nth-child(1) {
+            background: pink;
+        }
+        section div:nth-child(2) {
+            background: purple;
+        }
+        section div:nth-child(3) {
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>

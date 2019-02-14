@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 80%;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;/* 规定灵活的项目在必要的时候拆行或拆列。 */
+            /* flex-wrap: nowrap;默认值。规定灵活的项目不拆行或不拆列。  不换行，则 收缩（压缩） 显示  强制一行内显示 */
+            /* flex-wrap: wrap-reverse;规定灵活的项目在必要的时候拆行或拆列，但是以相反的顺序。 */
+        } 
+        section div {
+            width: 350px;
+            height: 250px;
+        }
+        section div:nth-child(1) {
+            background: pink;
+        }
+        section div:nth-child(2) {
+            background: purple;
+        }
+        section div:nth-child(3) {
+            background: skyblue;
+        }
+        section div:nth-child(4) {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </section>
+</body>
+</html>
